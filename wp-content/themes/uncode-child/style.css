@@ -1,0 +1,21 @@
+/*
+Theme Name: Uncode Child
+Description: Child theme for Uncode theme
+Author: Undsgn™
+Author URI: http://www.undsgn.com
+Template: uncode
+Version: 1.0.0
+Text Domain: uncode
+*/
+
+.uncode-single-media-wrapper {
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.uncode-single-media-wrapper:hover {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
