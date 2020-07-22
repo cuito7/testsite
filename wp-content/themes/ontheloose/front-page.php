@@ -1,33 +1,23 @@
-<?php get_header(); ?>
-
-<div class="homepage_div">
-<h2>ontheloosebaby</h2>
-
-<!-- Query for posts which are of 'post_type' => 'post' -->
-<?php $query = new WP_Query( array( 'post_type' => 'post' ) ); ?>
-
-<!-- Begin The Loop -->
-<?php if ( $query->have_posts() ) {
-      while ( $query->have_posts() ) {
-        $query->the_post(); ?>
-        <div class="post">
-            <!-- Display the Title as a link to the Post's permalink. -->
-            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
-            <!-- Display the post content -->
-            <div class="entry">
-              <?php the_content(); ?>
-            </div>
-
-            <!-- Display the post thumbnail -->
-            <div class="image">
-              <img src="<?php echo get_the_post_thumbnail_url(get_the_ID());?>" class="small_thumbnail_image" /> 
-            </div>
-        </div> 
-<?php
-    }
-}
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <?php wp_head(); ?>
+</head>
+<body>
+    <header>
+    </header>
+<div class="container">
+  <div class="row"><a href="http://localhost:8888/test-page/"><div class="cell"><h1 class="cell_heading">ON</h1></div></a><a href="http://localhost:8888/test-page/"><div class="cell"><h1 class="cell_heading">THE</h1></div></a></div>
+  <div class="row"><a href="http://localhost:8888/test-page/"><div class="cell"><h1 class="cell_heading">LOOSE</h1></div></a><a href="http://localhost:8888/test-page/"><div class="cell"><h1 class="cell_heading">DUDE</h1></div></a></div>
 </div>
 
-<?php get_footer(); ?>
+<footer>
+</footer>
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
